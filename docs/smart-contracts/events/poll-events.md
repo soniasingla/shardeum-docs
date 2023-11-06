@@ -18,7 +18,7 @@ Smart contract event listening notifies applications and users in real-time that
 
 ## Frontend
 
-If you swap tokens on a website using a AMM DEX smart contract, the token balances will know when to be updated on the frontend almost instantly using events.
+If you swap tokens on a website using an AMM DEX smart contract, the token balances will know when to be updated on the frontend almost instantly using events.
 
 ## Backend
 
@@ -38,7 +38,7 @@ Reading smart contract events can also be done using Shardeum cycles (we listen 
 
 ## Reading events with Shardeum Cycles:
 
-1. To get the current cycle: get latest block, then divide by 10, and round down.
+1. To get the current cycle: get the latest block, then divide by 10, and round down.
 
 2. Build the JSON URL with:
 
