@@ -809,8 +809,9 @@ curl <server_ip>:9001/nodeinfo
 
 ### Update
 
-- Stop your validator before updating (you don't need to unstake though)
-- In your terminal, first exit from the container using
+- Never update your validator if its status is "active" or it may be slashed
+- Stop your validator before updating while status is "waiting-for-network" or "standby"
+- In your terminal, first exit from the container using :-
 
 ```shell
 exit
