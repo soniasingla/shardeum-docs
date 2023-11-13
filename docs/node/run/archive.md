@@ -3,7 +3,7 @@ title: Archive
 sidebar_position: 3
 ---
 
-# Running a archive
+# Running an archive
 
 ## Why run an archive?
 
