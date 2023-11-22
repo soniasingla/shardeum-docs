@@ -21,10 +21,10 @@ export const Validator=()=>(
 </div>
 <div className="row valrow">
 <div  className="card valcard">
-<a className="vlink" href="#step-3-open-validator-cli"> Validator CLI Commands</a >
+<a className="vlink" href="#step-3-open-validator-cli"> Validator ClI Commands</a >
 </div>
 <div  className="card valcard ">
-<a className="vlink" href="#step-8-get-shm-from-betanet-faucet"> Get Betanet SHM</a >
+<a className="vlink" href="#step-8-get-shm-from-betanet-faucet"> Get Betanet SHM </a >
 </div>
 <div  className="card valcard">
 <a className="vlink" href="#uninstall-validator"> Uninstall Validator</a >
@@ -580,7 +580,7 @@ operator-cli start
 
 Wait and refresh the page.
 
-The node is running correctly if the “Start Node” button now says “Stop Node”. If you want to stop the node with the CLI:
+The node is running correctly if the “Start Node” button now says “Stop Node”. If you want to stop tne node with the CLI:
 
 <Tabs>
   <TabItem value="shell" label="Shell" default>
@@ -644,7 +644,7 @@ pm2 delete [id]
 
 ## Step 8: Get SHM from Betanet Faucet
 
-[Shardeum Testnet SHM Faucet Guide for Sphinx Validator 1.X](/faucet/claim)
+[Shardeum Twitter SHM Faucet Guide for Sphinx Validator 1.X](/faucet/claim#shardeum-faucet-website)
 
 ## Step 9: Stake SHM to validator
 
@@ -837,7 +837,7 @@ operator-cli gui start
   </TabItem>
 </Tabs>
 
-- Check your current version from either CLI or GUI and make sure it is the latest version.
+- Check your currect version from either CLI or GUI and make sure it is the latest version.
 
 :::
 
