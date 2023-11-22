@@ -21,10 +21,10 @@ export const Validator=()=>(
 </div>
 <div className="row valrow">
 <div  className="card valcard">
-<a className="vlink" href="#step-3-open-validator-cli"> Validator CLI Commands</a >
+<a className="vlink" href="#step-3-open-validator-cli"> Validator ClI Commands</a >
 </div>
 <div  className="card valcard ">
-<a className="vlink" href="#step-8-get-shm-from-betanet-faucet"> Get Betanet SHM</a >
+<a className="vlink" href="#step-8-get-shm-from-betanet-faucet"> Get Betanet SHM </a >
 </div>
 <div  className="card valcard">
 <a className="vlink" href="#uninstall-validator"> Uninstall Validator</a >
@@ -108,7 +108,7 @@ Terminal
 We will use curl in this tutorial to download files:
 
 :::info
-Mac comes with curl, so we will install homebrew with curl (which will handle packages like apt in Linux).
+Mac comes with curl, so we will install homebrew with curl (which will handle handle packages like apt in Linux).
 :::
 
 <Tabs groupId="operating-systems">
@@ -580,7 +580,7 @@ operator-cli start
 
 Wait and refresh the page.
 
-The node is running correctly if the “Start Node” button now says “Stop Node”. If you want to stop the node with the CLI:
+The node is running correctly if the “Start Node” button now says “Stop Node”. If you want to stop tne node with the CLI:
 
 <Tabs>
   <TabItem value="shell" label="Shell" default>
@@ -644,7 +644,7 @@ pm2 delete [id]
 
 ## Step 8: Get SHM from Betanet Faucet
 
-[Shardeum Testnet SHM Faucet Guide for Sphinx Validator 1.X](/faucet/claim)
+[Shardeum Twitter SHM Faucet Guide for Sphinx Validator 1.X](/faucet/claim#shardeum-faucet-website)
 
 ## Step 9: Stake SHM to validator
 
@@ -809,9 +809,8 @@ curl <server_ip>:9001/nodeinfo
 
 ### Update
 
-- Never update your validator if its status is "active" or it may be slashed
-- Stop your validator before updating while status is "waiting-for-network" or "standby"
-- In your terminal, first exit from the container using :-
+- Stop your validator before updating (you don't need to unstake though)
+- In your terminal, first exit from the container using
 
 ```shell
 exit
@@ -838,7 +837,7 @@ operator-cli gui start
   </TabItem>
 </Tabs>
 
-- Check your current version from either CLI or GUI and make sure it is the latest version.
+- Check your currect version from either CLI or GUI and make sure it is the latest version.
 
 :::
 
