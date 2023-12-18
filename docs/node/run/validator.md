@@ -837,7 +837,7 @@ operator-cli gui start
   </TabItem>
 </Tabs>
 
-- Check your currect version from either CLI or GUI and make sure it is the latest version.
+- Check your correct version from either CLI or GUI and make sure it is the latest version.
 
 :::
 
