@@ -4,7 +4,7 @@ export default function connectToSphinx() {
 
   const chainId = '0x1f92';
   const rpcURL = 'https://sphinx.shardeum.org/';
-  const networkName = 'Shardeum Validator Sphinx ';
+  const networkName = 'Shardeum Sphinx 1.X ';
   const currencyName = 'SHM';
   const currencySymbol = 'SHM';
   const explorerURL = 'https://explorer-sphinx.shardeum.org/';
@@ -17,7 +17,7 @@ export default function connectToSphinx() {
       return;
     }
     if (window.ethereum.networkVersion == 8082) {
-      alert("You are already connected to Sphinx Validator 1.X (chainId 8082).", )
+      alert("You are already connected to Shardeum Sphinx 1.X (chainId 8082).", )
       return;
     }
     try{
@@ -45,7 +45,7 @@ export default function connectToSphinx() {
   };
 
   return (
-      <button className="button buttonHighContrast" onClick={addNetwork}>Connect to Shardeum Sphinx Validator </button>
+      <button className="button buttonHighContrast" onClick={addNetwork}>Connect to Shardeum Sphinx 1.X </button>
   );
 
 }

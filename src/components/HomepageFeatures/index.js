@@ -43,7 +43,7 @@ const FeatureList = [
 
 
 
-                Add Shardeum Sphinx networks in a few clicks.
+                Add Shardeum Sphinx 1.X network in a few clicks.
             </>
         ),
         alink:'/network/endpoints'
@@ -53,7 +53,7 @@ const FeatureList = [
         icon: <LuBaggageClaim  style={stylecard.iconStyle}/>,
         description: (
             <>
-                Claim testnet SHM for Sphinx Dapp and Sphinx Validator
+                Claim testnet SHM for Shardeum Sphinx 1.X
 
 
             </>
