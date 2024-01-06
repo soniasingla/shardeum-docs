@@ -7,13 +7,10 @@ sidebar_position: 4
 
 ## Links
 
-**Shardeum Validator Sphinx 1.X :**
+**Shardeum Sphinx 1.X :**
 
 https://explorer-sphinx.shardeum.org/
 
-**Shardeum Dapp Sphinx 1.X :**
-
-https://explorer-dapps.shardeum.org
 
 
 
