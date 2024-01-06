@@ -9,7 +9,7 @@ Shardeum is an EVM based L1 that uses dynamic state sharding to achieve linearly
 
 Shardeum provides the highest throughput capacity of any EVM based L1 without sacrificing on decentralization. Developers can deploy and interact with Solidity or Vyper contracts without special considerations for sharding, since contracts are deployed to unique shards automatically while retaining atomic composability across all shards.
 
-Shardeum is the solution to blockchain trilemma. As blockchain tries to achieve scalability,decentralization and security, it will only be able to attain two. There must be trade-off between decentralization and scalability with security an essential element. Shardeum achieves scalability, decentralization and still maintains security.
+Shardeum is the solution to the blockchain trilemma. As blockchain tries to achieve scalability, decentralization and security, it will only be able to attain two. There must be a trade-off between decentralization and scalability with security an essential element. Shardeum achieves scalability, decentralization and still maintains security.
 
 Shardeum’s auto-scaling feature allows the network to automatically adjust the number and size of shards based on the current workload. This allows the system to optimize performance and maintain high levels of scalability as it grows and evolves.
 

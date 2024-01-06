@@ -29,7 +29,7 @@ Shardeum will be the infrastructure on which the next iteration of the Internet,
 
 ## How will Shardeum achieve energy efficiency?
 
-Energy efficiency means the consensus algorithm used by the network should not require excessive energy beyond what is necessary to process the transactions.
+Energy efficiency means that the consensus algorithm used by the network should not require excessive energy beyond what is necessary to process the transactions.
 Bitcoin and other networks based on the Nakamoto consensus are designed to use high energy expenditure to secure the network from a 51% attack. However, efficient consensus algorithms such as Paxos and PBFT do not require high energy expenditure. The tradeoff is that these algorithms need the nodes to be assigned a node id before joining the network. Thus, these algorithms have been used in permissioned networks and not for nodes that can participate without requiring a node id.
 Shardeum will use an energy-efficient consensus algorithm that requires nodes to have a node id upon joining the network. However, a novel approach does not need a central entity to decide which nodes are part of the network.
 
