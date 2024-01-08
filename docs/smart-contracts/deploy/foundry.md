@@ -283,17 +283,17 @@ forge coverage --report lcov && genhtml lcov.info -o report --branch-coverage
 </Tabs>
 
 2. Check coverage results in
-
-        report/index.html
-
+```
+report/index.html
+```
 The coverage report should look like this in your web browser:
 ![foundryCoverageLCOV](/img/foundry/foundryCoverageLCOV.jpg)
 
 3. Delete the following before pushing to GitHub to keep commits lightweight:
-
-        lcov.info
-        reports
-
+```
+lcov.info
+reports
+```
 ## Fork Network General Test Coverage Percentage
 
 The test coverage above uses a local network to save time.
@@ -373,7 +373,7 @@ forge create --rpc-url $goerliHTTPS_InfuraAPIKey --etherscan-api-key $etherscanA
 
 If the following Goerli deployment worked, the following Shardeum deployment should work as well.
 
-:::warning Warning
+:::danger[WARNING]
 The
 
 ```
@@ -391,7 +391,7 @@ EIP-1559 not activated
 :::
 
 
-:::warning Warning
+:::danger[WARNING]
 The terminal might not notify you if the contract deployment worked.
 Check the Shardeum Explorer after a transaction cycle to see if the contract deployed from the signer address from the private key used.
 :::

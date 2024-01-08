@@ -45,10 +45,10 @@ export const Validator=()=>(
 ## Benefits of operating a validator
 
 Running your own validator:
-
-    -enhances Shardeum network security
-    -earns testnet SHM from user transaction fees
-
+```
+-enhances Shardeum network security
+-earns testnet SHM from user transaction fees
+```
 ## Validating Transactions
 
 Shardeum validators perform consensus on transactions.
@@ -375,7 +375,7 @@ Start the CLI by running the following shell script:
   </TabItem>
 </Tabs>
 
-:::warning
+:::danger[WARNING]
 If you see docker container error:
 
 ```golang
@@ -395,7 +395,7 @@ docker start <container_id_hexadecimal>
 </Tabs>
 :::
 
-:::warning
+:::danger[WARNING]
 If you see docker permission error:
 
 ```golang
@@ -746,7 +746,7 @@ You can also stake and unstake from the Validator CLI if you are not able to acc
 
 First, set your private key in your Validator CLI:
 
-:::warning
+:::danger[WARNING]
 Be very careful with your private keys. We recommend you use a private key which has testnet tokens only to be safe.
 :::
 
@@ -782,7 +782,7 @@ operator-cli unstake
 
 ### Version
 
-:::warning
+:::danger[WARNING]
 New validator versions will be released over time.
 It is necessary to keep your validator updated
 by checking the minimum version required and your current version periodically.

@@ -18,7 +18,7 @@ These nodes validate the transactions in the network by participating in the con
 
 ### Standby
 
-:::caution
+:::warning[CAUTION]
 Standby validators require staked SHM to become active.
 :::
 

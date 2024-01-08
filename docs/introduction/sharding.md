@@ -12,12 +12,12 @@ Sharding helps mitigate the performance challenges that unsharded blockchain net
 
 # Types of Sharding
 
-| Network Sharding  | Compute Sharding      |  Data Sharding | State Sharding|
-|:----------|:-------------|:------|::-------|
-| Operates Independently | Store entire block chain | Data partitioned into parts |Blockchain state divided into segement|
-| Has its own consesus algorithim | Process transaction assigned to the shard   |  Store a part of data | Each shard maintains a segment  |
-| Has own ledger & transaction pool| Validate transaction assigned to the shard |   Maintain a part of data | Reduce computational requirement|
-|Process more transactions| Cross shard transaction requires additional step | Fast data access and retrieval|  Easy to participate   |
+| Network Sharding                      | Compute Sharding                                 | Data Sharding                  | State Sharding                         |
+|---------------------------------------|--------------------------------------------------|--------------------------------|----------------------------------------|
+| Operates Independently                | Store entire block chain                         | Data partitioned into parts    | Blockchain state divided into segement |
+| Has its own consesus algorithim       | Process transaction assigned to the shard        | Store a part of data           | Each shard maintains a segment         |
+| Has own ledger &amp; transaction pool | Validate transaction assigned to the shard       | Maintain a part of data        | Reduce computational requirement       |
+| Process more transactions             | Cross shard transaction requires additional step | Fast data access and retrieval | Easy to participate                 
 
 
 1. **Network Sharding:**  Network sharding involves partitioning the nodes in the blockchain network into smaller, interconnected groups called shards. Each shard is responsible for processing and validating a subset of the transactions and storing a portion of the blockchain's state. By distributing the workload among multiple shards, the network can process more transactions concurrently and achieve greater throughput. In network sharding, each shard operates independently, with its consensus algorithim, ledger, and transaction pool. However, they still communicate with one another to maintain the overall security and integrity of the network. Cross-shard communication happens through a mechanism that allows shards to exchange information and synchronize their states.
