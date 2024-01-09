@@ -228,18 +228,22 @@ module.exports = {
   // plugins: ['docusaurus-plugin-sass',
   //           'plugin-image-zoom',
   //           'docusaurus-lunr-search'],
-   plugins: [ [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'whitepaper',
-        path: 'whitepaper',
-        routeBasePath: '/whitepaper',
-        sidebarPath:  false,
-        // ... other options
-      },
-    ],'docusaurus-plugin-sass',
-    'plugin-image-zoom'],
+  plugins: [ [
+    '@docusaurus/plugin-content-docs',
+    {
+      id: 'whitepaper',
+      path: 'whitepaper',
+      routeBasePath: '/whitepaper',
+      sidebarPath:  false,
+      // ... other options
+    },
+  ],'docusaurus-plugin-sass',
+    'plugin-image-zoom',[
+      'docusaurus-pushfeedback',{
+        project: 'docs.shardeum.org/tr96sbvw30',
+        buttonPosition: 'center-right',
+        modalPosition: 'center',
+        buttonStyle: 'dark',
+      }
+    ]],
 };
-
-
-
