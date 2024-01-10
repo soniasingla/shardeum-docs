@@ -39,8 +39,6 @@ The content of this whitepaper is intended for informational purposes only and d
 
 Anyone considering using Shardeum or engaging in associated activities should conduct thorough due diligence and seek advice from appropriate professionals. By accessing this whitepaper, readers accept full responsibility for any actions taken based on the information contained herein.
 
-</div>
-
 ## 1 Background
 
 The meteoric rise of [Bitcoin](https://bitcoin.org/bitcoin.pdf) and [Ethereum](https://ethereum.org/669c9e2e2027310b6b3cdce6e1c52962/Ethereum_Whitepaper_-_Buterin_2014.pdf) has brought about a revolutionary change in how society exchanges, stores, and organizes digital assets, representing a profound transformation of the digital economy and societal infrastructure. In 2015, the Ethereum network made it possible for the first time to create fully programmable smart contracts on a decentralized network, setting off a revolution. The demand for decentralized applications has since exploded with use cases like AMMs, DeFi, NFTs and gaming bringing new users into the space who otherwise were not interested in just cryptocurrency. As the popularity of Ethereum has grown over the years, the demand for transactions on the network has reached the maximum capacity of 20 transactions per second (TPS). This has led to the transaction fees rising from under 1 cent in 2015 to about $50 in 2022. Many applications which were feasible on Ethereum are no longer feasible due to the high transaction fees. There is a growing need for a smart contract platform that can keep transaction fees low not just when the network is new, but even years later as the number of transactions continue to grow.
@@ -916,7 +914,7 @@ The ultimate goal of any decentralized platform is to be supported and governed 
 
 In the evolving landscape of smart contract platforms, Shardeum presents an innovative approach that addresses the intrinsic challenges posed by the blockchain trilemma. Through the use of a several novel innovations such as dynamic state sharding, linear scaling, autoscaling, cross shard atomic composability and Proof of Quorum and by also leveraging a sharded, blockless and EVM compatible framework, Shardeum solves the scalability trilemma between scalability, security and decentralization. Shardeum will ultimately transform the wider web3 ecosystem, ushering in an era of near unbounded scalability, unimpeachable security and unprecedented decentralization, heralding the advent of the first generation of killer applications with billions of users.
 
-
+</div>
 
 
 
