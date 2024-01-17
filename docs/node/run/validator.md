@@ -33,51 +33,22 @@ export const Validator=()=>(
 </div>
     );
 
-
-# How to run a validator node
-
-
 <Validator />
 
+## Benefits of operating a Shardeum validator
+Earn SHM for securing the network
+Contribute to the security, scalability and decentralization of Shardeum
+#NotYourNodeNotYourNetwork Shardeum validators don't need to rely on a 3rd party staking as a service provider
 
-
-
-## Benefits of operating a validator
-
-Running your own validator:
-```
--enhances Shardeum network security
--earns testnet SHM from user transaction fees
-```
-## Validating Transactions
-
-Shardeum validators perform consensus on transactions.
-
-Shardeum validators with honest transaction consensus earn testnet SHM.
-
-Shardeum validators with dishonest transaction consensus will have their testnet SHM slashed.
-
-:::info
-
-Estimate future validator rewards using the [Node Reward Calculator](https://shardeum.org/shm-tokenomics/)
-
-:::
 
 ## Minimum Hardware Requirements
 
-```
--250 GB SSD storage
--Quad core CPU less than 10 years old if self hosting
--Dual core CPU works if hosted with newer Xeons / EPYC
--16 GB of ram,  4+ GB of virtual memory recommended
--Hosting: 8 GB RAM + 8 GB Virtual Memory
-```
 
-## How do I run a validator on Shardeum?
-
-## Step 1: Install prerequisites
-
-### Open a Shell terminal
+- 250 GB SSD storage
+- Quad core CPU less than 10 years old if self hosting
+- Dual core CPU works if hosted with newer Xeons / EPYC
+- 16 GB of ram,  4+ GB of virtual memory recommended
+- Hosting: 8 GB RAM + 8 GB Virtual Memory
 
 Access the terminal interface for Shell CLI commands:
 
@@ -108,7 +79,7 @@ Terminal
 We will use curl in this tutorial to download files:
 
 :::info
-Mac comes with curl, so we will install homebrew with curl (which will handle packages like apt in Linux).
+Mac comes with curl, so we will install homebrew with curl (which will handle handle packages like apt in Linux).
 :::
 
 <Tabs groupId="operating-systems">
@@ -295,7 +266,7 @@ If you wish to set an explicit external IP, enter an IPv4 address (default=auto)
 Add a custom internal IP address or use an automatically detected IP address:
 
 ```shell
-If you wish to set an explicit internal IP, enter an IPv4 address (default=auto): 
+If you wish to set an explicit internal IP, enter an IPv4 address (default=auto):
 ```
 
 Set the first p2p port (default 9001):
@@ -375,7 +346,7 @@ Start the CLI by running the following shell script:
   </TabItem>
 </Tabs>
 
-:::danger[WARNING]
+:::warning
 If you see docker container error:
 
 ```golang
@@ -395,7 +366,7 @@ docker start <container_id_hexadecimal>
 </Tabs>
 :::
 
-:::danger[WARNING]
+:::warning
 If you see docker permission error:
 
 ```golang
@@ -435,18 +406,6 @@ then try to start the shell script again.
 :::
 
 ## Step 4: Open validator GUI
-
-While inside the shell script, run:
-
-<Tabs>
-  <TabItem value="shell" label="Shell" default>
-
-```shell
-operator-cli gui start
-```
-
-  </TabItem>
-</Tabs>
 
 Go to your web browser and go to:
 
@@ -644,7 +603,7 @@ pm2 delete [id]
 
 ## Step 8: Get SHM from Betanet Faucet
 
-[Shardeum Twitter SHM Faucet Guide for Sphinx Validator 1.X](/faucet/claim#shardeum-faucet-website)
+[Shardeum Discord SHM Faucet for Sphinx 1.X](https://discord.com/channels/933959587462254612/1070780355931541514)
 
 ## Step 9: Stake SHM to validator
 
@@ -671,8 +630,7 @@ When you click "Add Stake", you will see the following:
 This example has filled in 10 SHM tokens to stake.
 
 :::tip
-It is recommended to stake just 10 SHM per Validator node,
-since rewards will be the same with 10 SHM or more staked for a Validator.
+Stake minimum of 10 SHM per Validator node to earn rewards.
 :::
 
 Once all fields are filled, click the “Stake” button.
@@ -746,8 +704,10 @@ You can also stake and unstake from the Validator CLI if you are not able to acc
 
 First, set your private key in your Validator CLI:
 
-:::danger[WARNING]
+:::warning
 Be very careful with your private keys. We recommend you use a private key which has testnet tokens only to be safe.
+
+Please note, this is not the recommended method for staking with the Shardeum validator. Mishandling of private key may result in loss of assets. Shardeum discards private key after the transaction is signed. Take precaution when extracting your private key.
 :::
 
 ```shell
@@ -780,67 +740,9 @@ operator-cli unstake
 
 ## Validator
 
-### Restarting Validator After Shutdown or Restart
-
-If your computer restarts or if the Docker container running your Shardeum validator shuts down, there's no need to go through the entire installation process again. You can simply restart the container. This section covers how to restart your Shardeum validator node effectively.
-
-:::info
-When a Docker container, like your validator node, is stopped or if the computer restarts, the container remains in a non-running state but is not deleted. This is typically referred to as a 'stopped' or 'exited' state.
-:::
-
-#### Restarting the Docker Container
-
-1. **Identify the Container**: To restart your validator, first, identify the container ID or name. You can list all Docker containers, including those not currently running, by using the command:
-
-   ```
-   docker ps -a
-   ```
-
-   Look for the container named `shardeum-dashboard` or note its container ID.
-
-2. **Restart the Container**: Once you've identified the container, use the following command to restart it:
-
-   ```
-   docker start shardeum-dashboard
-   ```
-
-   This command reactivates the previously stopped container. Replace `shardeum-dashboard` with the actual container ID if necessary.
-
-3. **Verify Restart**: Ensure the container has restarted successfully by checking the list of running containers:
-   ```
-   docker ps
-   ```
-   The `shardeum-dashboard` container should appear in this list with a status indicating it is running.
-
-#### Accessing the Validator CLI
-
-After restarting the container, you can access the validator CLI:
-
-1. **Navigate to Validator Directory**: Change to the Shardeum validator directory (default is `~/.shardeum/`):
-
-   ```
-   cd ~/.shardeum/
-   ```
-
-2. **Enter the CLI**: Launch the CLI environment by executing:
-   ```
-   ./shell.sh
-   ```
-   This will open the CLI, allowing you to manage your Shardeum validator node.
-
-:::tip
-Following these steps ensures your validator node is quickly operational after a shutdown or restart, avoiding the need to reinstall or reconfigure the validator software.
-:::
-
-Remember, regular maintenance and monitoring of your node are crucial for optimal performance and security within the Shardeum network. Stay updated with the latest versions and participate actively in the community for a seamless validating experience.
-
-:::caution
-Always ensure your firewall and router settings are appropriately configured, especially after a restart, to maintain network connectivity and validator node functionality.
-:::
-
 ### Version
 
-:::danger[WARNING]
+:::warning
 New validator versions will be released over time.
 It is necessary to keep your validator updated
 by checking the minimum version required and your current version periodically.
@@ -895,7 +797,7 @@ operator-cli gui start
   </TabItem>
 </Tabs>
 
-- Check your correct version from either CLI or GUI and make sure it is the latest version.
+- Check your currect version from either CLI or GUI and make sure it is the latest version.
 
 :::
 
