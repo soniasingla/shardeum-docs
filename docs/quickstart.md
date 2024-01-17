@@ -28,7 +28,7 @@ Shardeum is an EVM Compatible L1 blockchain that uses dynamic state sharding to 
 
 **Seamless Transition:** Developers can effortlessly deploy their Ethereum-based smart contracts to Shardeum, expanding their reach and impact.
 
-**Wallet Support:** No need for additional downloads; Shardeum supports wallets based on EVM by default, streamlining user experience.
+**Wallet Support:** No need for additional downloads; Shardeum supports wallets based on EVM by default, streamlining user experience.{#textid}
 
 **Community-Centric:** Built and developed by a global community of developers and shardians, Shardeum is more than a platform; it's a movement.
 

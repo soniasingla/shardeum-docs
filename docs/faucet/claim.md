@@ -24,9 +24,9 @@ https://discord.com/channels/933959587462254612/1070780355931541514
 
 
 4. Submit the following text in the faucet text channel you are in (a black box with address will appear after you type /faucet):
-```
-/faucet [address: yourMetamaskWalletAddress]
-```
+
+        /faucet [address: yourMetamaskWalletAddress]
+
 SHM will be sent to your wallet after step 4.
 
 Video tutorial on using Shardeum Discord Faucet:
