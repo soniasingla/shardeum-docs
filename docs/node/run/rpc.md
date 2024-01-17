@@ -8,9 +8,10 @@ sidebar_position: 2
 ## Why run a RPC?
 
 Running your own RPC:
-
-    -increases read and write speed to a blockchain
-    -improves decentralization with more network endpoints for users to access
+```
+-increases read and write speed to a blockchain
+-improves decentralization with more network endpoints for users to access
+```
 
 ## How do I run an RPC on Shardeum?
 

@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer').themes.github;
+const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 module.exports = {
@@ -166,8 +166,8 @@ module.exports = {
               title: 'Resources',
               items: [
                 {
-                  label: 'Whitepaper',
-                  to: 'https://shm.gg/whitepaper',
+                  label: 'Litepaper',
+                  to: 'https://shardeum.org/Shardeum-Litepaper.pdf',
                 },
                 {
                   label: 'FAQs',
@@ -228,6 +228,22 @@ module.exports = {
   // plugins: ['docusaurus-plugin-sass',
   //           'plugin-image-zoom',
   //           'docusaurus-lunr-search'],
-  plugins: ['docusaurus-plugin-sass',
-    'plugin-image-zoom'],
+  plugins: [ [
+    '@docusaurus/plugin-content-docs',
+    {
+      id: 'whitepaper',
+      path: 'whitepaper',
+      routeBasePath: '/whitepaper',
+      sidebarPath:  false,
+      // ... other options
+    },
+  ],'docusaurus-plugin-sass',
+    'plugin-image-zoom',[
+      'docusaurus-pushfeedback',{
+        project: 'docs.shardeum.org/tr96sbvw30',
+        buttonPosition: 'center-right',
+        modalPosition: 'center',
+        buttonStyle: 'dark',
+      }
+    ]],
 };

@@ -9,17 +9,17 @@ import TabItem from '@theme/TabItem';
 ## Keep track of the same contracts cross chain easily
 
 Having contracts deployed at the same address cross chain makes it very easy to find contracts for:
-
-    -users who want to quickly find the same contracts on other chains
-    -developers maintaining the same contracts across different chains
-
+```
+-users who want to quickly find the same contracts on other chains
+-developers maintaining the same contracts across different chains
+```
 ## Simple deployment with the same address cross chain
 
 Simple methods:
-
-    -a new wallet (nonce = 0 for all chains)
-    -a wallet used for deploying contracts with the same cross chain nonce values
-
+```
+-a new wallet (nonce = 0 for all chains)
+-a wallet used for deploying contracts with the same cross chain nonce values
+```
 :::caution Caution
 Using the same wallet again will require you to keep track of nonce values cross chain.
 :::
@@ -32,28 +32,28 @@ Alchemy recommends using a Hardhat nonce query script to quickly check a wallet'
 ## How are smart contract addresses determined?
 
 Smart contracts deployment addresses can be created with either opcodes:
-
-    CREATE
-
+```
+CREATE
+```
 or
-
-    CREATE2
-
+```
+CREATE2
+```
 ## How does CREATE determine smart contract addresses?
 
 CREATE deployment addresses depend on the sender's:
-
-    -address
-    -nonce
-
+```
+-address
+-nonce
+```
 ## How does CREATE2 determine smart contract addresses?
 
 CREATE2 deployment addresses depend on:
-
-    -sender address (CREATE2 Factory is the sender in this context to execute the CREATE2 opcode)
-    -salt
-    -byteCode [creationCode since constructor input arguments can change the byteCode value]
-
+```
+-sender address (CREATE2 Factory is the sender in this context to execute the CREATE2 opcode)
+-salt
+-byteCode [creationCode since constructor input arguments can change the byteCode value]
+```
 For more info on the CREATE2 opcode:
 
 [EIP-1014: Skinny CREATE2](https://eips.ethereum.org/EIPS/eip-1014)
@@ -66,7 +66,7 @@ Do the following steps:
 
 1. Create a contract with SELFDESTRUCT in a function only the owner can access to keep the contract secure.
 
-:::warning WARNING
+:::danger WARNING
 Calling SELFDESTRUCT will delete all data in a contract! Be very careful using it.
 Goerli supports SELFDESTRUCT while Shardeum currently does not. SELFDESTRUCT might
 also be deprecated with EIP-4758: https://eips.ethereum.org/EIPS/eip-4758.
@@ -80,11 +80,11 @@ Remember this CREATE2 Factory address and the salt you used for the contract byt
 
 3. Once the contract is deployed from the CREATE2 Factory, call SELFDESTRUCT.
 
-:::warning WARNING
+:::danger WARNING
 If you skip this step 3, you will see the following error on the Shardeum explorer:
-
-      create collision
-
+```
+create collision
+```
 since there is a contract at that address that hasn't been destroyed yet.
 :::
 
@@ -104,13 +104,13 @@ Examples:
 ## CREATE2 General Factory
 
 This factory is useful for:
-
-    -saving gas:
-      -factory can be used for other contracts since it takes raw creationCode
-      -constructors cannot be payable (callvalue() [msg.value in assembly] set to 0, saves gas)
-      -constructors cannot have arguments (memory variables not used saves gas)
-    -creationCode == runtimeCode, since there are no constructor arguments changing the byteCode
-
+```
+-saving gas:
+    -factory can be used for other contracts since it takes raw creationCode
+    -constructors cannot be payable (callvalue() [msg.value in assembly] set to 0, saves gas)
+    -constructors cannot have arguments (memory variables not used saves gas)
+-creationCode == runtimeCode, since there are no constructor arguments changing the byteCode
+```
 <Tabs>
   <TabItem value="solidity" label="Solidity" default>
 
@@ -170,10 +170,10 @@ contract Create2Factory {
 ## CREATE2 No Bytecode Function Input
 
 This factory is useful for:
-
-    -building creationCode directly inside CREATE2 Factory functions with constructor argument values
-    -keeping contract deployment simple without needing to deploy other contracts with general byteCode
-
+```
+-building creationCode directly inside CREATE2 Factory functions with constructor argument values
+-keeping contract deployment simple without needing to deploy other contracts with general byteCode
+```
 <Tabs>
   <TabItem value="solidity" label="Solidity" default>
 

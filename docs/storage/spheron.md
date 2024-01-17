@@ -225,10 +225,9 @@ The `spheron publish` command allows you to upload your project using the config
 spheron publish
 ```
 
-<Callout type="warning">
-  Make sure that you create a production build before running the `spheron
-  publish` command.
-</Callout>
+:::danger[WARNING]
+Make sure that you create a production build before running the `spheron publish` command.
+:::
 
 Here is an example of how the result will look:
 
