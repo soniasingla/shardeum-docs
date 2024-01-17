@@ -11,13 +11,10 @@ Run your Shardeum node with the help of third-party providers. These providers o
 
 ### Spheron Network
 
-**About Spheron:** Spheron simplifies the deployment process by offering compute instances pre-installed with Shardeum Testnet Validator on its global Web3 Infrastructure. It is designed to provide developers with a quick and straightforward setup process, focusing on decentralized and robust compute infrastructure. This makes it an ideal choice for developers who want to deploy and test their applications on the Shardeum network without the hassle of complex setup procedures.
+**About:** Spheron allows you to deploy a compute instance pre-installed with Shardeum Testnet Validator on the Akash Network. It offers a quick setup for developers with a focus on decentralized and robust compute infrastructure.
 
-- **Setup Guide:** [Deploy Shardeum Testnet Validator with Spheron](https://docs.spheron.network/marketplace-guide/shardeum/)
-- **Video Tutorial:** Watch this [step-by-step video tutorial](https://youtu.be/uNb-_jl7XRs?si=oyE7p9dWHUO7bryR) to understand how to deploy your Shardeum Testnet Validator Node using Spheron.
+- **Guide:** [Deploy Shardeum Testnet Validator with Spheron](https://docs.spheron.network/marketplace-guide/shardeum/)
 - **Website:** [Spheron Network](https://www.spheron.network/)
-
-
 
 ### Mintair
 
@@ -27,7 +24,7 @@ Run your Shardeum node with the help of third-party providers. These providers o
 - **Tutorial Video:** [Watch the Tutorial](https://x.com/mintairxyz/status/1743275676990656600?s=46)
 - **Website:** [Mintair](https://www.mintair.xyz/)
 
-### 🔜 More Providers Coming Soon...
+### More providers coming soon...
 
 ---
 
