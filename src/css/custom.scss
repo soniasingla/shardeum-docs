@@ -20,9 +20,7 @@
   --ifm-color-primary-light: #909090;
   --ifm-color-primary-lighter: #A0A0A0;
   --ifm-color-primary-lightest: #B0B0B0;
-  --ifm-padding-horiz-lg:1rem;
-
-
+  --ifm-padding-horiz-lg:rem;
 
 }
 
@@ -30,18 +28,12 @@
   --ifm-background-color: #FFFFFF;
   --ifm-background-surface-color: #FFFFFF;
   --ifm-color-primary: #FF0000;
-
-}
-
-html[data-theme= 'light']{
-  --feedback-primary-color: #FF0000;
 }
 
 html[data-theme='dark'] {
   --ifm-background-color: #000000;
   --ifm-background-surface-color: #151515;
   --ifm-color-scheme: light;
-
 }
 
 body,
@@ -427,30 +419,6 @@ p.text-newsletter{
     font-size: medium;
   }
 }
-.feedbackCard{
-  display:flex;
-  flex-direction: column;
-  position: fixed;
-  z-index: 2000;
-  width: 60%;
-  height: auto;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 0.5rem 0.25rem hsl(0 0% 0% / 10%);
-
-}
-.feedbackCard::backdrop {
-  background: hsl(0 0% 0% / 50%);
-}
-.feedback-button{
-  position:fixed;
-  right:-35px;
-  top:50%;
-  z-index: 2000;
-  transform: rotate(90deg);
-}
-
 @media (max-width: 590px) {
   html div[class*="announcementBar"] {
     padding:0.2rem;
@@ -544,13 +512,9 @@ p.text-newsletter{
     font-size: 1rem;
   }
 
-}
-@media screen and (min-width:800px) {
-  .feedbackCard{
-    width:30%;
-  }
 
 }
+
 @media (max-width:1050px){
   .navbar__items{
     display: flex;
@@ -599,11 +563,18 @@ p.text-newsletter{
     flex-direction: row;
     justify-content: flex-start;
     column-gap: 10px;
+
+
+
   }
 
   a.navbar__item {
+
+
     font-weight: 700;
     font-size: 12px;
+
+
   }
   p.small-text{
     font-size: 1rem;
@@ -653,6 +624,6 @@ p.text-newsletter{
 }
 
 .tps_table {
-  font-size: 12px;
-  text-align: center;
+    font-size: 12px;
+    text-align: center;
 }
