@@ -20,6 +20,7 @@
     "@docusaurus/core": "3.0.0",
     "@docusaurus/plugin-content-docs": "^3.0.0",
     "@docusaurus/preset-classic": "3.0.0",
+    "@jsplumb/docusaurus-plugin-env-loader-json": "^1.0.0",
     "@mdx-js/react": "^3.0.0",
     "@wojtekmaj/react-daterange-picker": "^5.4.4",
     "clsx": "^2.0.0",
