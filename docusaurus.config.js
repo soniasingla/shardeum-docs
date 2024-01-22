@@ -228,18 +228,17 @@ module.exports = {
   // plugins: ['docusaurus-plugin-sass',
   //           'plugin-image-zoom',
   //           'docusaurus-lunr-search'],
-   plugins: [ [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'whitepaper',
-        path: 'whitepaper',
-        routeBasePath: '/whitepaper',
-        sidebarPath:  false,
-        // ... other options
-      },
-    ],'docusaurus-plugin-sass',
-    'plugin-image-zoom'],
+  plugins: [ [
+    '@docusaurus/plugin-content-docs',
+    {
+      id: 'whitepaper',
+      path: 'whitepaper',
+      routeBasePath: '/whitepaper',
+      sidebarPath:  false,
+      // ... other options
+    },
+  ],'docusaurus-plugin-sass',
+    'plugin-image-zoom',
+    "@jsplumb/docusaurus-plugin-env-loader-json",
+  ],
 };
-
-
-
