@@ -49,11 +49,11 @@ startCycle = endCycle = 49
 address = 0x23FF65f07cAbAd1643440a0114d71260F2Bb6352
 ```
 
-https://explorer-dapps.shardeum.org/api/transaction?startCycle=19020&endCycle=19045&address=0x245E2395712F888CeD1033C924115105dC32e388
+https://explorer-sphinx.shardeum.org/api/transaction?startCycle=19020&endCycle=19045&address=0x245E2395712F888CeD1033C924115105dC32e388
 
 3. Filter for transactions per page [note, 10 transactions per page]:
 
-https://explorer-dapps.shardeum.org/api/transaction?startCycle=19020&endCycle=19045&address=0x245E2395712F888CeD1033C924115105dC32e388&page=1
+https://explorer-sphinx.shardeum.org/api/transaction?startCycle=19020&endCycle=19045&address=0x245E2395712F888CeD1033C924115105dC32e388&page=1
 
 ## JSON URL Filter Variables
 
@@ -74,7 +74,7 @@ Reading transaction events from the null address (address(0)) from cycle 0 to 10
 ```js
 const axios = require('axios');
 
-let baseUrl = "https://explorer-dapps.shardeum.org/api/transaction?startCycle=19020&endCycle=19045&address=0x245E2395712F888CeD1033C924115105dC32e388"
+let baseUrl = "https://explorer-sphinx.shardeum.org/api/transaction?startCycle=19020&endCycle=19045&address=0x245E2395712F888CeD1033C924115105dC32e388"
 
 getTransactionsToAddressCycleRange(baseUrl)
 
@@ -117,7 +117,7 @@ async function getTransactionsToAddressCycleRange(baseUrl) {
 import requests
 import json
 
-transactionsInCycleRangeUrlString = "https://explorer-dapps.shardeum.org/api/transaction?startCycle=19020&endCycle=19045&address=0x245E2395712F888CeD1033C924115105dC32e388"
+transactionsInCycleRangeUrlString = "https://explorer-sphinx.shardeum.org/api/transaction?startCycle=19020&endCycle=19045&address=0x245E2395712F888CeD1033C924115105dC32e388"
 
 response = requests.get(transactionsInCycleRangeUrlString)
 transactionsInCycleRangeUrlJSON = response.json()
@@ -323,7 +323,7 @@ Listening for the latest cycle, which might contain transaction events from an a
 const axios = require('axios');
 const ethers = require('ethers')
 
-const rpcURL = "https://dapps.shardeum.org"
+const rpcURL = "https://sphinx.shardeum.org"
 
 const provider = new ethers.providers.JsonRpcProvider(rpcURL)
 
@@ -342,7 +342,7 @@ async function listenForCycle() {
     let cycle = await provider.getBlockNumber();
     console.log(Math.floor(cycle/10))
 
-    let baseUrlCycleAddress = "https://dapps.shardeum.org.shardeum.org/api/transaction?startCycle=" + cycle + "&endCycle=" + cycle + "&address=0x0000000000000000000000000000000000000000" 
+    let baseUrlCycleAddress = "https://sphinx.shardeum.org.shardeum.org/api/transaction?startCycle=" + cycle + "&endCycle=" + cycle + "&address=0x0000000000000000000000000000000000000000" 
     console.log(baseUrlCycleAddress)
 
     let responseRawJSON = await axios.get(baseUrlCycleAddress);
@@ -387,7 +387,7 @@ import time
 import math
 import requests  # use requests instead of urllib for simplicity
 
-ShardeumConnectionHTTPS = "https://dapps.shardeum.org";
+ShardeumConnectionHTTPS = "https://sphinx.shardeum.org";
 web3 = Web3(Web3.HTTPProvider(ShardeumConnectionHTTPS))
 
 print("Connected to Web3? ", web3.isConnected())
@@ -400,7 +400,7 @@ while True:
     cycle =  (math.floor(web3.eth.blockNumber/10))  #Divide current bundle [block] by 10, then round down to get cycle.
     print(cycle)
 
-    transactionsInCycleRangeUrlString = "https://explorer-dapps.shardeum.org/api/transaction?startCycle=" + str(cycle) + "&endCycle=" + str(cycle) + "&address=" + addressToSubscribeTo 
+    transactionsInCycleRangeUrlString = "https://explorer-sphinx.shardeum.org/api/transaction?startCycle=" + str(cycle) + "&endCycle=" + str(cycle) + "&address=" + addressToSubscribeTo 
     print(transactionsInCycleRangeUrlString)
 
     response = requests.get(transactionsInCycleRangeUrlString)
