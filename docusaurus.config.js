@@ -1,6 +1,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-
+import 'dotenv/config';
 const lightCodeTheme = require('prism-react-renderer').themes.github;
 const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
@@ -15,6 +15,10 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'Shardeum', // Usually your GitHub org/user name.
   projectName: 'shardeum-docs', // Usually your repo name.
+   customFields: {
+    // Put your custom environment here
+    api_url: process.env.API_URL,
+  },
 
   presets: [
     [
