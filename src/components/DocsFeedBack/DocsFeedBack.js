@@ -97,7 +97,7 @@ export default function DocsFeedBack (props) {
                 <div className="card feedbackCard container">
                     <FaWindowClose onClick={closePopUp} className={styles.closeWindow}/>
                     { feedBackSuccess && <p>Your Comment has been succesfully submitted </p>}
-                    { feedBackError && <p> An error occurred while submitting your feeback</p>}
+                    { feedBackError && <p> An error occurred while submitting your feedback</p>}
                     <FeedBackForm closePopUp={closePopUp} handleSubmit={handleSubmit} />
                 </div>
 
