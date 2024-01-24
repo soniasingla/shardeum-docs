@@ -58,7 +58,7 @@ export default function DocsFeedBack (props) {
     const [feedBackSuccess,setFeedBackSuccess] = useState(false);
     const [feedBackError,setFeedBackError] = useState(false)
     const {siteConfig} = useDocusaurusContext();
-    const apiUrl = siteConfig.customFields.API_URL
+    const apiUrl = siteConfig.customFields.api_url
 
     const openPopUp = ()=> {
         setShowForm(true)
