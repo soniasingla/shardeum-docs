@@ -24,6 +24,8 @@ const FeedBackForm=({closePopUp, handleSubmit})=>{
         e.preventDefault();
         const data={email:email,comments:comments}
         handleSubmit(data);
+        setComment(" ");
+		setEmail(" ");
     }
     const handleEmail=(e)=>{
         setEmail(e.target.value);
