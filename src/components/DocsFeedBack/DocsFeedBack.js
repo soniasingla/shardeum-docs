@@ -25,7 +25,7 @@ const FeedBackForm=({closePopUp, handleSubmit})=>{
         const data={email:email,comments:comments}
         handleSubmit(data);
         setComment(" ");
-		setEmail(" ");
+	setEmail(" ");
     }
     const handleEmail=(e)=>{
         setEmail(e.target.value);
@@ -60,7 +60,7 @@ export default function DocsFeedBack (props) {
     const [feedBackSuccess,setFeedBackSuccess] = useState(false);
     const [feedBackError,setFeedBackError] = useState(false)
     const {siteConfig} = useDocusaurusContext();
-    const apiUrl = siteConfig.customFields.api_url
+    const apiUrl = siteConfig.customFields.api_url;
 
     const openPopUp = ()=> {
         setShowForm(true)
@@ -68,7 +68,9 @@ export default function DocsFeedBack (props) {
     }
 
     const closePopUp = ( )=> {
-        setShowForm(false)
+        setShowForm(false);
+	setFeedBackSuccess(false);
+	setFeedBackError(false);
     }
     const handleSubmit = (data)=> {
 
