@@ -82,12 +82,13 @@ frameBorder="0">
 </iframe>
 
 ## Faucetme Discord Faucet
-Faucetme (https://shardeum-validator.faucetme.pro/) quick and safe way to claim SHM for validators. Just connect your discord and get 5 SHM once a day
+
+[Faucetme](https://shardeum.faucetme.pro/) quick and safe way to claim SHM for validators. Just connect your discord and get 5 SHM once a day
 
 
-1. Login to the Faucetme Discord:
 
-[Login to Faucetme Discord](https://shardeum-validator.faucetme.pro/)
+
+1. [Login to Faucetme Discord](https://discord.com/invite/stakeme)
 
 2. Paste your wallet address into the text box
    ![faucetme](/img/faucet/fauctme.png)
