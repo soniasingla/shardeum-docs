@@ -36,9 +36,7 @@ export const Validator=()=>(
 <Validator />
 
 ## Benefits of operating a Shardeum validator
-Earn SHM for securing the network
-Contribute to the security, scalability and decentralization of Shardeum
-#NotYourNodeNotYourNetwork Shardeum validators don't need to rely on a 3rd party staking as a service provider
+Earn SHM for securing the network. Contribute to the security, scalability and decentralization of Shardeum.
 
 
 ## Minimum Hardware Requirements
