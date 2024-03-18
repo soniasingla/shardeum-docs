@@ -8,6 +8,7 @@ sidebar_position: 2
 ## Why run a RPC?
 
 Running your own RPC:
+
 ```
 -increases read and write speed to a blockchain
 -improves decentralization with more network endpoints for users to access
@@ -16,3 +17,5 @@ Running your own RPC:
 ## How do I run an RPC on Shardeum?
 
 More details on how to run a Shardeum RPC will be shared after Sphinx Validator 1.X.
+
+## Access Test -PS
