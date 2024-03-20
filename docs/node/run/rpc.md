@@ -55,8 +55,6 @@ Replace `username` with your server's username and `server_ip_address` with the 
 
     - Once connected, update your server's package manager:
 
-      bashCopy code
-
       `sudo apt update && sudo apt upgrade -y`
 
 2.  **Install Dependencies**:
@@ -94,7 +92,6 @@ Replace `username` with your server's username and `server_ip_address` with the 
 The current Archiver IP is **_172.105.153.160_**. You'll need to configure this manually. Make sure you are in the json-rpc-server directory and do the following. Open the archiverConfig.json file:
 
             nano archiverConfig.json
-
 
 Use the arrow keys to navigate to the "ip": "127.0.0.1", line (Note that this was the archiver IP at the time of this document's creation).
 
