@@ -17,14 +17,12 @@ RPC nodes are critical for the scalability and accessibility of blockchain netwo
 
 ## Benefits of Running a Shardeum RPC Node?
 
-Running your own Shardeum RPC node offers several advantages that enhance both performance and decentralization::
+Running your own Shardeum RPC node offers several advantages that enhance both performance and decentralization:
 
-```
--***Increased Read and Write Speed:*** Having direct access to a dedicated RPC node significantly reduces latency in DLT interactions, leading to faster transaction submissions and data retrieval.
--***Enhanced Privacy and Security***: By running your own node, you have control over the data flow and can implement tailored security measures, reducing reliance on third-party providers.
--***Support for Network Decentralization:*** Operating your own RPC node contributes to the network's resilience and decentralization. A higher number of independent nodes ensures better distribution of data and redundancy, crucial for maintaining the network's integrity and availability.
--***Customization and Control:*** With your own RPC node, you gain the flexibility to customize settings, optimize performance, and manage updates according to your requirements, providing a tailored environment for your blockchain interactions.
-```
+- **Increased Read and Write Speed:** Having direct access to a dedicated RPC node significantly reduces latency in DLT interactions, leading to faster transaction submissions and data retrieval.
+- **Enhanced Privacy and Security:** By running your own node, you have control over the data flow and can implement tailored security measures, reducing reliance on third-party providers.
+- **Support for Network Decentralization:** Operating your own RPC node contributes to the network's resilience and decentralization. A higher number of independent nodes ensures better distribution of data and redundancy, crucial for maintaining the network's integrity and availability.
+- **Customization and Control:** With your own RPC node, you gain the flexibility to customize settings, optimize performance, and manage updates according to your requirements, providing a tailored environment for your blockchain interactions.
 
 By setting up a Shardeum RPC node, you're not just enhancing your blockchain experience; you're also contributing to the growth and stability of the network. This guide is designed to navigate you through the setup process, ensuring you have the knowledge and tools to successfully deploy and manage your node.
 
@@ -32,7 +30,7 @@ Let's embark on this journey to unlock the full potential of blockchain technolo
 
 # Setting Up Shardeum RPC Node on a Server
 
-If you are attempting to set up an RPC node on a personal computer, you can jump to the section below titled "Clone the Repository and Install"
+If you are attempting to set up an RPC node on a personal computer, you can jump to the section below titled "Clone the Repository and Install."
 
 ## Prerequisites/Requirements
 
@@ -53,9 +51,9 @@ Before you begin the setup process for your Shardeum RPC node, ensure you meet t
 
 ## Step-by-Step Guide
 
-This guide provides detailed instructions on how to securely access a server via SSH, deploy the "json-rpc-server" application, configure necessary files, and validate the setup by testing the node's functionality. This document is intended for exchanges or parties interested in setting up a JSON RPC node for Shardeum.\*\*
+This guide provides detailed instructions on how to securely access a server via SSH, deploy the "json-rpc-server" application, configure necessary files, and validate the setup by testing the node's functionality. This document is intended for exchanges or parties interested in setting up a JSON RPC node for Shardeum.
 
-A video walk through of the process can also be found here: https://youtu.be/knsUIuw23BA
+A video walkthrough of the process can also be found here: https://youtu.be/knsUIuw23BA
 
 ### Accessing the Server via SSH
 
@@ -63,7 +61,9 @@ A video walk through of the process can also be found here: https://youtu.be/kns
 
 Connect to your server using the SSH command:
 
-    ssh username@server_ip_address
+```bash
+ssh username@server_ip_address
+```
 
 Replace `username` with your server's username and `server_ip_address` with the server's IP address.
 
@@ -75,13 +75,17 @@ Replace `username` with your server's username and `server_ip_address` with the 
 
     - Once connected, update your server's package manager:
 
-      `sudo apt update && sudo apt upgrade -y`
+```bash
+`sudo apt update && sudo apt upgrade -y`
+```
 
 2.  **Install Dependencies**:
 
     - Install any required dependencies that your "json-rpc-server" might need. Common dependencies include Git and Node.js. If not already installed, they can typically be installed via:
 
-      `sudo apt install git nodejs npm -y`
+```bash
+sudo apt install git nodejs npm -y`
+```
 
 #### Clone the Repository and Install
 
@@ -89,19 +93,25 @@ Replace `username` with your server's username and `server_ip_address` with the 
 
     - Clone the "json-rpc-server" repository to your server:
 
-      `git clone https://gitlab.com/shardeum/json-rpc-server.git`
+```bash
+`git clone https://gitlab.com/shardeum/json-rpc-server.git`
+```
 
 2.  **Navigate to the Repository Directory**:
 
     - Change directory to the cloned repository:
 
-      `cd json-rpc-server`
+```bash
+`cd json-rpc-server`
+```
 
 3.  **Install Project Dependencies**:
 
     - Install Node.js dependencies defined in the project:
 
-      `npm install`
+```bash
+`npm install`
+```
 
 ### Configure Archiver IP and Run Server
 
@@ -111,7 +121,9 @@ Replace `username` with your server's username and `server_ip_address` with the 
 
 The current Archiver IP is **_172.105.153.160_**. You'll need to configure this manually. Make sure you are in the json-rpc-server directory and do the following. Open the archiverConfig.json file:
 
-            nano archiverConfig.json
+```bash
+nano archiverConfig.json
+```
 
 Use the arrow keys to navigate to the "ip": "127.0.0.1", line (Note that this was the archiver IP at the time of this document's creation).
 
@@ -123,19 +135,25 @@ Once you've made the change, you can save and exit nano by pressing Ctrl + O to 
 
 Start the server using npm.
 
-            npm run start
+```bash
+npm run start
+```
 
 ## Testing Your RPC Server
 
 Once your RPC server is running, you can test it by making some read calls. It is advised that you give the node at least 10 minutes to sync after spinning it up to avoid issues.Shardeum uses a similar API modality as Ethers and you can make similar calls, for example:
 
-    curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' http://<your_server_IP>:8080
+```bash
+curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' http://`{your_server_IP}`:8080
+```
 
-Be sure to replace <your_server_IP> in the above call and you should get a non-zero response once your node is synced. Also note that this assumes you've not manually configured the port used to something other than 8080.
+Be sure to replace "your_server_IP" in the above call and you should get a non-zero response once your node is synced. Also note that this assumes you've not manually configured the port used to something other than 8080.
 
 You can check an EOA's balance with:
 
-    curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x924FA9B0565848a50Cc3e555eB5263a8288629f9", "latest"],"id":1}' http://<your_server_IP>:8080
+```bash
+curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x924FA9B0565848a50Cc3e555eB5263a8288629f9", "latest"],"id":1}' http://`{your_server_IP}`:8080
+```
 
 ## Troubleshooting
 
@@ -145,11 +163,15 @@ This repo defaults to using Port 8080 for external communication. If you have so
 
 The file where port configuration is located is: json-rpc-server(root)>src>config.ts
 
-    cd src
+```bash
+cd src
+```
 
 Next, open config.ts for editing:
 
-    nano config.ts
+```bash
+nano config.ts
+```
 
 Next, use the arrow keys to move down to line 97 where, by default, it will read "port: 8080," and change this line to the desired port. Save the change with "CONTROL + O", "ENTER", and then exit with "CONTROL + X"
 
