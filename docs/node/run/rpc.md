@@ -76,7 +76,7 @@ Replace `username` with your server's username and `server_ip_address` with the 
     - Once connected, update your server's package manager:
 
 ```bash
-`sudo apt update && sudo apt upgrade -y`
+sudo apt update && sudo apt upgrade -y
 ```
 
 2.  **Install Dependencies**:
@@ -84,7 +84,7 @@ Replace `username` with your server's username and `server_ip_address` with the 
     - Install any required dependencies that your "json-rpc-server" might need. Common dependencies include Git and Node.js. If not already installed, they can typically be installed via:
 
 ```bash
-sudo apt install git nodejs npm -y`
+sudo apt install git nodejs npm -y
 ```
 
 #### Clone the Repository and Install
@@ -94,7 +94,7 @@ sudo apt install git nodejs npm -y`
     - Clone the "json-rpc-server" repository to your server:
 
 ```bash
-`git clone https://gitlab.com/shardeum/json-rpc-server.git`
+git clone https://gitlab.com/shardeum/json-rpc-server.git
 ```
 
 2.  **Navigate to the Repository Directory**:
@@ -102,7 +102,7 @@ sudo apt install git nodejs npm -y`
     - Change directory to the cloned repository:
 
 ```bash
-`cd json-rpc-server`
+cd json-rpc-server
 ```
 
 3.  **Install Project Dependencies**:
@@ -110,16 +110,34 @@ sudo apt install git nodejs npm -y`
     - Install Node.js dependencies defined in the project:
 
 ```bash
-`npm install`
+npm install
 ```
 
 ### Configure Archiver IP and Run Server
 
-#### _PLEASE NOTE: THIS SECTION IS IN DEVELOPMENT. IF YOU HAVE ISSUES YOU SHOULD REACH OUT TO SHARDEUM'S TEAM FOR THE CURRENT CONFIGURATION_
+#### _Configuring an up-to-date archiver is essential to operating a functional RPC Node. Due to security concerns, Shardeum does not currently publicly share current archiver IP addresses. If you are a representative from a partner of Shardeum or another interested party, please contact a Shardeum representative and you will be provided an up-to-date archiver IP_
 
 **Edit Configuration Files (if necessary)**:
 
-The current Archiver IP is **_172.105.153.160_**. You'll need to configure this manually. Make sure you are in the json-rpc-server directory and do the following. Open the archiverConfig.json file:
+You can try running your RPC node at this point by calling the following:
+
+```bash
+npm run start
+```
+
+If you get an error along the lines of:
+
+```
+Environment variable ARCHIVER_INFO is not defined
+Archivers URL not found in config
+Failed to fetch data from archiver 127.0.0.1:4000: Error: connect ECONNREFUSED 127.0.0.1:4000
+No archivers responded when fetching current active archivers
+unhandledRejection:Error: No archivers responded
+```
+
+you'll need to manually configure the archiver IP with which your RPC node interacts. Contact a Shardeum representative for the best archiver IP address for your purposes and then proceed as follows.
+
+Make sure you are in the json-rpc-server directory and do the following. Open the archiverConfig.json file:
 
 ```bash
 nano archiverConfig.json
@@ -127,7 +145,7 @@ nano archiverConfig.json
 
 Use the arrow keys to navigate to the "ip": "127.0.0.1", line (Note that this was the archiver IP at the time of this document's creation).
 
-Delete 127.0.0.1 and replace it with 172.105.153.160 (**_THIS IS THE CURRENT ARCHIVER IP ADDRESSS_**). The text should now read "ip": "172.105.153.160",
+Delete 127.0.0.1 and replace it with the IP address provided by your Shardeum representative.
 
 Once you've made the change, you can save and exit nano by pressing Ctrl + O to write the changes, pressing Enter to confirm, and then Ctrl + X to exit the editor.
 
